@@ -10,7 +10,7 @@ class Amqcli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_darwin_amd64.tar.gz"
-      sha256 "1541ed1d379e286756c699ef776fe102abd5670db65fbe4801f75fd89a7df67a"
+      sha256 "a4c3b838a9c066383f183c9a9c75264b975240a6824435dffc5e3133a1610b9a"
 
       define_method(:install) do
         bin.install "amqcli"
@@ -19,7 +19,7 @@ class Amqcli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_darwin_arm64.tar.gz"
-      sha256 "9f21a47eb08d88499c6bc5747597b0a7a9e4255c896f4dabd60ff211a6cf107c"
+      sha256 "7056f73a35e2f438c0166974dcc2c512ef46aed4531eb11477f698a49b366942"
 
       define_method(:install) do
         bin.install "amqcli"
@@ -31,7 +31,7 @@ class Amqcli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_linux_amd64.tar.gz"
-      sha256 "65759ca363cb2bae1b43ad3ba33a9261a27eb029a37443e7e5e853ed02745d6b"
+      sha256 "ade552a34a98d790aa05dc32feb07e75a2637c55112305bcd2cded17a34a3178"
       define_method(:install) do
         bin.install "amqcli"
         (etc/"amqcli").install "config.yml"
@@ -39,7 +39,7 @@ class Amqcli < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_linux_arm64.tar.gz"
-      sha256 "c5ee43fa7ac81b7c9df56c817624db5d11bfca31301dfaa2b0e13e67ff9283fb"
+      sha256 "2463a8d8369df9c06abca8c973dbea0cbef8577de8dc3684439adab07e266182"
       define_method(:install) do
         bin.install "amqcli"
         (etc/"amqcli").install "config.yml"
