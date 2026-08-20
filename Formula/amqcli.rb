@@ -5,12 +5,12 @@
 class Amqcli < Formula
   desc "ActiveMQ TUI Client - Manage and monitor ActiveMQ queues and messages via terminal"
   homepage "https://github.com/xvlet/amqcli"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_darwin_amd64.tar.gz"
-      sha256 "a4c3b838a9c066383f183c9a9c75264b975240a6824435dffc5e3133a1610b9a"
+      url "https://github.com/xvlet/amqcli/releases/download/v0.1.1/amqcli_darwin_amd64.tar.gz"
+      sha256 "cef963ec4847d3196750c8380b934778dfd336fd8a3e0406aaf4312f9272c029"
 
       define_method(:install) do
         bin.install "amqcli"
@@ -18,8 +18,8 @@ class Amqcli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_darwin_arm64.tar.gz"
-      sha256 "7056f73a35e2f438c0166974dcc2c512ef46aed4531eb11477f698a49b366942"
+      url "https://github.com/xvlet/amqcli/releases/download/v0.1.1/amqcli_darwin_arm64.tar.gz"
+      sha256 "8e386a69417ff66f5dd9e037475ffe68e84a9ea6c807f501011c2e3c353ce01e"
 
       define_method(:install) do
         bin.install "amqcli"
@@ -30,16 +30,16 @@ class Amqcli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_linux_amd64.tar.gz"
-      sha256 "ade552a34a98d790aa05dc32feb07e75a2637c55112305bcd2cded17a34a3178"
+      url "https://github.com/xvlet/amqcli/releases/download/v0.1.1/amqcli_linux_amd64.tar.gz"
+      sha256 "55ae8127e897f6c9e005e4722b329a9c1a1386c40b35d0f20fc79bc73e76e0e6"
       define_method(:install) do
         bin.install "amqcli"
         (etc/"amqcli").install "config.yml"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xvlet/amqcli/releases/download/v0.1.0/amqcli_linux_arm64.tar.gz"
-      sha256 "2463a8d8369df9c06abca8c973dbea0cbef8577de8dc3684439adab07e266182"
+      url "https://github.com/xvlet/amqcli/releases/download/v0.1.1/amqcli_linux_arm64.tar.gz"
+      sha256 "0e152fd31f094212102ed78a6ad3a661fd1670cdd44686388dfe1b3289fd1fe1"
       define_method(:install) do
         bin.install "amqcli"
         (etc/"amqcli").install "config.yml"
